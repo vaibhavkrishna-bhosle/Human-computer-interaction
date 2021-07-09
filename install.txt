@@ -1,0 +1,5 @@
+Numpy
+opencv-python
+PyAutoGUI
+Dlib
+Imutils
