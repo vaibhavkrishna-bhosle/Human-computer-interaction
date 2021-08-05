@@ -1,5 +1,7 @@
 Numpy
 opencv-python
 PyAutoGUI
+cmake
 Dlib
 Imutils
+mediapipe
