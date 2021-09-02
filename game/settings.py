@@ -1,6 +1,6 @@
 import pygame
 
-WINDOW_NAME = "Mosquito Exterminator"
+WINDOW_NAME = "Baloon pop"
 GAME_TITLE = WINDOW_NAME
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 1200, 700

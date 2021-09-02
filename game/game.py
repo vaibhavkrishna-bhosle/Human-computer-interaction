@@ -18,12 +18,6 @@ class Game:
         # Load camera
         self.cap = cv2.VideoCapture(0)
 
-        self.sounds = {}
-        self.sounds["slap"] = pygame.mixer.Sound(f"Assets/Sounds/slap.wav")
-        self.sounds["slap"].set_volume(SOUNDS_VOLUME)
-        self.sounds["screaming"] = pygame.mixer.Sound(f"Assets/Sounds/screaming.wav")
-        self.sounds["screaming"].set_volume(SOUNDS_VOLUME)
-
 
     def reset(self): # reset all the needed variables
         self.hand_tracking = HandTracking()
@@ -99,12 +93,12 @@ class Game:
                 self.hand.image = self.hand.image_smaller.copy()
             else:
                 self.hand.image = self.hand.orig_image.copy()
-            self.score = self.hand.kill_insects(self.insects, self.score, self.sounds)
+            self.score = self.hand.kill_insects(self.insects, self.score)
             for insect in self.insects:
                 insect.move()
 
         else: # when the game is over
-            if ui.button(self.surface, 540, "Continue", click_sound=self.sounds["slap"]):
+            if ui.button(self.surface, 540, "Continue"):
                 return "menu"
 
 
