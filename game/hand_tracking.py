@@ -24,7 +24,6 @@ class HandTracking:
         # the BGR image to RGB.
         image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
         # To improve performance, optionally mark the image as not writeable to
-        # pass by reference.
         image.flags.writeable = False
         self.results = self.hand_tracking.process(image)
 

@@ -1,6 +1,6 @@
 import pygame
 
-WINDOW_NAME = "Baloon pop"
+WINDOW_NAME = "Baloon PoP"
 GAME_TITLE = WINDOW_NAME
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 1200, 700

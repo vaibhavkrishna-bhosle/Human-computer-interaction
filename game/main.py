@@ -1,4 +1,3 @@
-# Setup Python ----------------------------------------------- #
 import pygame
 import sys
 import os
@@ -9,7 +8,6 @@ from menu import Menu
 
 
 
-# Setup pygame/window --------------------------------------------- #
 os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (100,32) # windows position
 pygame.init()
 pygame.display.set_caption(WINDOW_NAME)
@@ -17,20 +15,16 @@ SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT),0,32)
 
 mainClock = pygame.time.Clock()
 
-# Fonts ----------------------------------------------------------- #
 fps_font = pygame.font.SysFont("coopbl", 22)
 
 
-# Variables ------------------------------------------------------- #
 state = "menu"
 
-# Creation -------------------------------------------------------- #
+# Creation
 game = Game(SCREEN)
 menu = Menu(SCREEN)
 
 
-
-# Functions ------------------------------------------------------ #
 def user_events():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -57,16 +51,11 @@ def update():
 
 
 
-# Loop ------------------------------------------------------------ #
 while True:
 
-    # Buttons ----------------------------------------------------- #
     user_events()
 
-    # Update ------------------------------------------------------ #
     update()
-
-    # FPS
     if DRAW_FPS:
         fps_label = fps_font.render(f"FPS: {int(mainClock.get_fps())}", 1, (255,200,20))
         SCREEN.blit(fps_label, (5,5))

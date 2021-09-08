@@ -5,8 +5,8 @@ from settings import *
 from background import Background
 from hand import Hand
 from hand_tracking import HandTracking
-from mosquito import Mosquito
-from bee import Bee
+from baloon import Mosquito
+from bomb import Bee
 import cv2
 import ui
 
